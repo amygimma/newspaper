@@ -1,11 +1,11 @@
 Newspaper::Application.routes.draw do
   post "article/create"
   get "article/read/:id", :to => "article#read"
-  get "article/update"
-  get "article/destroy"
+  patch "article/update/:id", :to => "article#update", as: :article_update
+  get "article/destroy/:id", :to => "article#destroy"
   get "article/index"
   get "article/new"
-  get "article/edit"
+  get "article/edit/:id", :to => "article#edit"
   get "/", :to => "article#index"
   get "/about", :to => "static#about"
   

@@ -8,7 +8,7 @@
     Location: <%= article.location %>  |
     Contact author: <a href="#"><%= article.contact %></a><br>
     Published at: <%= article.created_at %><br />
-    <br><%= article.body %><br>
+    <br><%= simple_format(article.body) %><br>
     <a href="/article/read/<%= article.id %>">View</a>
   </p>
   <br />

@@ -12,9 +12,19 @@ class ArticleController < ApplicationController
   end
 
   def update
+    article_id = params["id"]
+    
+    @article = Article.find(params[:id])
+    @article.update(params[:article].permit(:author, :title, :contact, :location, :body))
+    
+    redirect_to article_index_path
   end
 
   def destroy
+    article_id = params["id"]
+    Article.destroy(article_id)
+    
+    redirect_to article_index_path
   end
 
   def index
@@ -25,6 +35,8 @@ class ArticleController < ApplicationController
   end
 
   def edit
+    article_id = params["id"]
+    @article = Article.find(article_id)
   end
   
   private
