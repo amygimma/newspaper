@@ -7,6 +7,8 @@ class ArticleController < ApplicationController
   end
   
   def read
+    article_id = params["id"]
+    @article = Article.find(article_id)
   end
 
   def update

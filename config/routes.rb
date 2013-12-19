@@ -1,12 +1,12 @@
 Newspaper::Application.routes.draw do
   post "article/create"
-  get "article/read"
+  get "article/read/:id", :to => "article#read"
   get "article/update"
   get "article/destroy"
   get "article/index"
   get "article/new"
   get "article/edit"
-  get "/", :to => "static#home"
+  get "/", :to => "article#index"
   get "/about", :to => "static#about"
   
   

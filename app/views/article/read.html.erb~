@@ -7,9 +7,8 @@
     Contact author: <a href="#"><%= @article.contact %></a><br>
     Published at: <%= @article.created_at %><br />
     <br><%= @article.body %><br>
-    <a href="/article/edit/<%= @article.id %>">Edit </a>|
-<a href="/article/destroy/<%= @article.id %>">Delete</a>
   </p>
   <br />
 </div>
-
+<a href="/article/edit/<%= @article.id %>">Edit </a>|
+<a href="/article/destroy/<%= @article.id %>">Delete</a>

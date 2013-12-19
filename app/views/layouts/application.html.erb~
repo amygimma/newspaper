@@ -24,8 +24,8 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/car/new">New</a></li>
-            <li><a href="/car/index">Index</a></li>
+            <li><a href="/article/new">New</a></li>
+            <li><a href="/article/index">Index</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -34,8 +34,9 @@
  
 <!-- PART 1 - THE JUMBOTRON -->
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
+    <div class="jumbotron" style="background-image:url(http://us.123rf.com/400wm/400/400/damianpalus/damianpalus0805/damianpalus080500040/3019814-newspaper-stack-on-white-background.jpg);">
+      <div class="container" >
+     
         <h1>Articles</h1>
       </div>
     </div>
