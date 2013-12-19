@@ -1,4 +1,11 @@
 Newspaper::Application.routes.draw do
+  get "article/create"
+  get "article/read"
+  get "article/update"
+  get "article/destroy"
+  get "article/index"
+  get "article/new"
+  get "article/edit"
   get "/", :to => "static#home"
   get "/about", :to => "static#about"
   

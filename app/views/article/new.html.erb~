@@ -1,0 +1,35 @@
+<h1>Add an article</h1><br />
+
+<%= form_for :article, url: article_create_path do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+   
+   <p>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </p>
+  
+   <p>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </p>
+ 
+   <p>
+    <%= f.label :contact %>
+    <%= f.text_field :contact %>
+  </p>
+  
+  <p>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </p>
+  
+  <p>
+    <%= f.submit 'Publish' %>
+  </p>
+  
+
+  
+<% end %>

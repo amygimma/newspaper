@@ -1,0 +1,15 @@
+<h1>News</h1><br />
+
+<% @articles.each do |article| %>
+<div class="col-xs-12 col-md-4">
+  <h3><%= article.title %></h3>
+  <p>
+    By: <%= article.author %>  |
+    Location: <%= article.location %>  |
+    Contact author: <a href="#"><%= article.contact %></a><br>
+    Published at: <%= article.created_at %><br />
+    <br><%= article.body %>
+  </p>
+  <br />
+</div>
+<% end %>
