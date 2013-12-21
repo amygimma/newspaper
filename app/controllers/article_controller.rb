@@ -39,6 +39,33 @@ class ArticleController < ApplicationController
     @article = Article.find(article_id)
   end
   
+  def random
+    count = Article.count()
+  
+    @article = nil
+    until not @article.nil?
+      begin
+        random_number= rand(0..count)
+        @article = Article.find(random_number)
+      rescue =>e
+        puts e.message
+      end
+    end 
+      
+  end
+  
+  def search_post
+    @search_term = params["search_term"]
+    
+    @article = Article.find_by title: @search_term
+  end
+  
+  def author_return
+    @author_search_term = params["author_search_term"]
+    #@articles = Article.find_by author: @author_search_term
+    @articles = Article.where("author = ?", params["author_search_term"])
+  end
+  
   private
     def post_params
       params.require(:article).permit(:title, :author, :location, :contact, :body)

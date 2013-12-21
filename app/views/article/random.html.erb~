@@ -1,0 +1,18 @@
+<h1>Random</h1>
+
+
+<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+  <h1>Random</h1>
+  <h3><%= @article.title %></h3>
+  <p>
+    By: <%= @article.author %>  |
+    Location: <%= @article.location %>  |
+    Contact author: <a href="#"><%= @article.contact %></a><br>
+    Published at: <%= @article.created_at %><br />
+    <br><%= simple_format(@article.body) %><br>
+    <a href="/article/edit/<%= @article.id %>">Edit </a>|
+<a href="/article/destroy/<%= @article.id %>">Delete</a>
+  </p>
+  <br />
+</div>
+

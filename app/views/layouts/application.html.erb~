@@ -2,7 +2,7 @@
 <html>
 <head>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
 </head>
  
 <body>
@@ -37,7 +37,7 @@
     <div class="jumbotron" style="background-image:url(http://us.123rf.com/400wm/400/400/damianpalus/damianpalus0805/damianpalus080500040/3019814-newspaper-stack-on-white-background.jpg);">
       <div class="container" >
      
-        <h1>Articles</h1>
+        <h1>Newspaper Mockup</h1>
       </div>
     </div>
  
