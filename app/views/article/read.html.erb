@@ -11,5 +11,26 @@
 <a href="/article/destroy/<%= @article.id %>">Delete</a>
   </p>
   <br />
+  
+  <h3>Comments</h3>
+    <% @article.comments.each do |comment| %>
+
+    <p><%= comment.date %><br>
+       <%= comment.body %>
+    </p>
+    
+    
+    <br>
+  
+  <% end %>
+
+
+  
+  <form method="POST" action="/add_comment">
+    <%= token_tag form_authenticity_token %>
+      Comment: <input type="text" name="new_comment">
+      <input type="hidden" name="article_id" value="<%= @article.id %>">
+    <button class="submit">Submit</button>
+  </form>
 </div>
 

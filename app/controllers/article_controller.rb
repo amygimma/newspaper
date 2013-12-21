@@ -66,6 +66,19 @@ class ArticleController < ApplicationController
     @articles = Article.where("author = ?", params["author_search_term"])
   end
   
+  def add_comment
+    count = Comment.count()
+    new_comment = params["new_comment"]
+    
+    article_id = params["article_id"]
+
+    
+    @article = Article.find(article_id)
+    @comment = @article.comments.build(body: new_comment, date: DateTime.now.to_date )
+    @comment.save
+    redirect_to "/article/read/#{article_id}"
+  end
+  
   private
     def post_params
       params.require(:article).permit(:title, :author, :location, :contact, :body)

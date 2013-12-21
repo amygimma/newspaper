@@ -13,6 +13,7 @@ Newspaper::Application.routes.draw do
   post "/search", :to => "article#search_post"
   get "/author_search", :to => "static#author_search"
   post "/author_search", :to => "article#author_return"
+  post "/add_comment", :to => "article#add_comment"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
